@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ActivityIndicator.MainPage">
+    <Grid
+        RowDefinitions="*"
+        ColumnDefinitions="*">
+        <WebView 
+            x:Name="webView"
+            Source="https://www.google.com/"
+            Navigated="webView_Navigated"
+            Navigating="webView_Navigating"
+            IsVisible="False"/>
+
+        <ActivityIndicator
+            x:Name="actIndicator"
+            IsRunning="True"
+            IsVisible="True"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Scale="3"/>
+    </Grid>
+</ContentPage>
